@@ -275,3 +275,44 @@ h1,h2,h3,.disp{font-variation-settings:"wdth" 100;letter-spacing:-.03em}
 .next svg{width:.5em;height:.5em}
 .next:hover i{transform:translate(.06em,-.06em)}
 @media (max-width:860px){.acts{justify-content:flex-start}.hero .row{grid-template-columns:1fr}.m-gfx{aspect-ratio:auto;margin:10px 0 0}.media.m-gfx img{position:static}}
+
+/* ---- balanced pass: shapes and motion, used sparingly ---- */
+.logo .spark{width:13px;height:13px;color:var(--hot)}
+.badge{position:absolute;right:0;top:clamp(40px,7vw,104px);width:clamp(84px,9vw,128px);color:var(--ink);opacity:.9}
+.badge text{font-size:14.5px;letter-spacing:.16em}
+.badge .spin{animation-duration:28s}
+.mq{transform:none;margin:0 0 clamp(28px,4vw,52px);padding:13px 0;background:transparent;color:var(--ink);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+.mq div{animation-duration:44s;gap:22px;padding-right:22px}
+.mq span{font-size:clamp(15px,1.5vw,20px);font-weight:500;letter-spacing:-.01em}
+.mq .spark{width:.7em;height:.7em}
+.bar{border-top:0;padding-top:0}
+.card .star{width:clamp(150px,20vw,300px);right:-5%;top:-16%;opacity:.1;animation-duration:90s}
+.card .ring{width:clamp(180px,26vw,400px);height:clamp(180px,26vw,400px);left:-9%;bottom:-36%;opacity:.12;border-width:1.5px}
+.card:hover .star{opacity:.16}
+.card .star,.card .ring{transition:opacity .4s}
+.chero .star{width:clamp(180px,26vw,400px);right:-6%;top:-24%;opacity:.1;animation-duration:90s}
+.foot .star{width:clamp(96px,11vw,170px);right:6%;top:auto;bottom:30%;color:var(--hot);opacity:.95;animation-duration:70s}
+.about .big .spark{width:.5em;height:.5em;margin-left:.12em;animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(.72) rotate(45deg)}}
+.open i{transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.card{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card:hover{transform:translateY(-4px)}
+.media img{transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.m-gym .ph{transform:rotate(3deg)}
+.card:hover .m-gym .ph{transform:rotate(0) translateY(-10px)}
+.m-ai img:nth-child(1){transform:rotate(-5deg)}
+.m-ai img:nth-child(3){transform:rotate(5deg)}
+.card:hover .m-ai img:nth-child(1){transform:rotate(-7deg) translate(-6px,-6px)}
+.card:hover .m-ai img:nth-child(3){transform:rotate(7deg) translate(6px,-6px)}
+.m-lok .b{transform:rotate(-4deg);border:3px solid #fff}
+.card:hover .m-lok .b{transform:rotate(-1deg) translateY(-8px)}
+.hero h1{max-width:15ch}
+.hero h1::after{content:"";display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--hot);margin-left:.06em}
+.chip{transition:all .18s}
+.chip:hover{border-color:var(--ink)}
+.kit span{transition:transform .2s,border-color .2s}
+.kit span:hover{transform:translateY(-2px)!important;border-color:var(--ink)}
+.masonry img{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.masonry img:hover{transform:translateY(-4px)}
+@media (max-width:860px){.badge{display:none}.hero{padding-top:40px}.foot .star{width:84px;right:16px;bottom:auto;top:28px}}
+@media (prefers-reduced-motion:reduce){.about .big .spark{animation:none}}
